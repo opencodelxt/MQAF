@@ -8,18 +8,10 @@ Paper：Image Quality Assessment: Exploring Quality Awareness via Memory-driven 
 - PyTorch 1.7+
 - CUDA 10.2+
 
-## Training
-
-```bash
-# 混合模式
-python train.py --dataset CSIQ --train_mode hybrid --n_epoch 200 --learning_rate 1e-4 --name CSIQ_hybrid
-# 纯记忆模式
-python train.py --dataset CSIQ --train_mode memory_only --n_epoch 200 --learning_rate 1e-4 --name CSIQ_memory_only
-
-```
 
 ## Testing
+Please download model weights from [[Baidu](https://pan.baidu.com/s/1Eps3Bn0S8B-t5V9Xjn4k8g), Password:12sx] and run
 
 ```bash
-python test.py --dataset CSIQ --name CSIQ_hybrid_test --ckpt ./checkpoints/CSIQ_hybrid/best.pth
+python test.py --dataset TID2013 --name TID2013_hybrid_test --ckpt PATH_TO_CHECKPOINT_TID2013
 ```
